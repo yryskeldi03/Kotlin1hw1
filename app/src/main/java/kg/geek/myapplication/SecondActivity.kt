@@ -23,7 +23,6 @@ class SecondActivity : AppCompatActivity() {
         binding.btnStartFirstActivity.setOnClickListener {
             startMainActivity()
         }
-
     }
 
     private fun checkData() {
