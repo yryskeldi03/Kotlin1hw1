@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="Typos">Kotlin1hw1</string>
+    <string name="input_text">Введите текст</string>
+    <string name="move_to_second_screen">Перейти на второй экран</string>
+    <string name="move_to_first_screen">Перейти на первый экран</string>
+    <string name="enter_field">Заполните поле</string>
+    <string name="main_activity_title">MainActivity</string>
+    <string name="second_activity_title">SecondActivity</string>
+</resources>
