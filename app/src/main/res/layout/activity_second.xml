@@ -3,20 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@android:color/holo_blue_light"
     tools:context=".SecondActivity">
 
     <EditText
         android:id="@+id/et_input_text"
-        android:hint="@string/input_text"
         style="@style/et_input_text"
+        android:hint="@string/input_text"
         android:importantForAutofill="no" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_start_first_activity"
-        android:text="@string/move_to_first_screen"
-        style="@style/btn_move_to_next_screen" />
+        style="@style/btn_move_to_next_screen"
+        android:text="@string/move_to_first_screen" />
 
 </LinearLayout>
