@@ -5,4 +5,5 @@
     <dimen name="btn_width">200dp</dimen>
     <dimen name="btn_height">55dp</dimen>
     <dimen name="btn_margin_top">24dp</dimen>
+    <dimen name="tv_item_ts">26sp</dimen>
 </resources>

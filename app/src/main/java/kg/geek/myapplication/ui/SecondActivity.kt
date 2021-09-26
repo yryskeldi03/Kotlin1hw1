@@ -1,11 +1,13 @@
-package kg.geek.myapplication
+package kg.geek.myapplication.ui
 
 import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import kg.geek.myapplication.R
 import kg.geek.myapplication.databinding.ActivitySecondBinding
+import kg.geek.myapplication.important_data.Keys
 
 class SecondActivity : AppCompatActivity() {
 
@@ -26,7 +28,7 @@ class SecondActivity : AppCompatActivity() {
     }
 
     private fun checkData() {
-        val text: String? = intent.getStringExtra(TEXT_KEY)
+        val text: String? = intent.getStringExtra(Keys.TEXT_KEY)
         binding.etInputText.setText(text)
     }
 
@@ -38,12 +40,8 @@ class SecondActivity : AppCompatActivity() {
 
     private fun send() {
         val intent = Intent(this, MainActivity::class.java)
-        intent.putExtra(TEXT_KEY, binding.etInputText.text.toString())
+        intent.putExtra(Keys.TEXT_KEY, binding.etInputText.text.toString())
         setResult(Activity.RESULT_OK, intent)
         finish()
-    }
-
-    companion object {
-        private const val TEXT_KEY = "textFromSecondActivity"
     }
 }

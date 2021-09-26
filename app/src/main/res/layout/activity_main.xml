@@ -6,7 +6,7 @@
     android:background="@android:color/darker_gray"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <EditText
         android:id="@+id/et_input_text"
@@ -18,5 +18,12 @@
         android:id="@+id/btn_start_second_activity"
         style="@style/btn_move_to_next_screen"
         android:text="@string/move_to_second_screen" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_start_rv_activity"
+        style="@style/btn_move_to_next_screen"
+        android:text="@string/list_of_all_texts"
+        />
 
 </LinearLayout>

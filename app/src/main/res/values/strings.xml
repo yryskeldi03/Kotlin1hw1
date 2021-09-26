@@ -6,4 +6,5 @@
     <string name="enter_field">Заполните поле</string>
     <string name="main_activity_title">MainActivity</string>
     <string name="second_activity_title">SecondActivity</string>
+    <string name="list_of_all_texts">Список всех текстов</string>
 </resources>
