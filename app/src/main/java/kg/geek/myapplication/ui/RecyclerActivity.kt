@@ -1,6 +1,7 @@
 package kg.geek.myapplication.ui
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import kg.geek.myapplication.adapters.RecyclerAdapter
@@ -25,9 +26,19 @@ class RecyclerActivity : AppCompatActivity() {
 
     private fun initList() {
         adapter = RecyclerAdapter()
-        list = intent.getStringArrayListExtra(Keys.TEXT_KEY)!!
-        adapter.setList(list)
-        binding.rvText.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL))
+        list = intent.getStringArrayListExtra(Keys.TEXT_KEY) as ArrayList<String>
+
+        if (list.isNullOrEmpty())
+            binding.tvEmpty.visibility = View.VISIBLE
+        else
+            adapter.setList(list)
+
+        binding.rvText.addItemDecoration(
+            DividerItemDecoration(
+                this,
+                DividerItemDecoration.VERTICAL
+            )
+        )
         binding.rvText.adapter = adapter
     }
 }

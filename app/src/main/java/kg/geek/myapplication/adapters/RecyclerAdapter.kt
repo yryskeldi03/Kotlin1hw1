@@ -8,9 +8,9 @@ import kotlin.collections.ArrayList
 
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
-    private var list: ArrayList<String> = ArrayList()
+    private var list: ArrayList<String>? = ArrayList()
 
-    fun setList(list: ArrayList<String>) {
+    fun setList(list: ArrayList<String>?) {
         this.list = list
         notifyItemInserted(0)
     }
@@ -20,15 +20,16 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.onBind(list[position])
+        list!![position].let { holder.onBind(it) }
     }
 
-    override fun getItemCount(): Int = list.size
+    override fun getItemCount(): Int = list!!.size
 
     class ViewHolder(private val binding: ItemRvBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun onBind(s: String) {
             binding.tvItem.text = s
         }
+
     }
 }

@@ -7,4 +7,5 @@
     <string name="main_activity_title">MainActivity</string>
     <string name="second_activity_title">SecondActivity</string>
     <string name="list_of_all_texts">Список всех текстов</string>
+    <string name="tv_empty">Пусто</string>
 </resources>
